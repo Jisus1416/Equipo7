@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="../../Statics/styles/registro.css">
     <link rel="stylesheet" href="../../../../../bootstrap/libs/bootstrap-5.3.0-dist/css/bootstrap.css">
     <script src="../../../../../bootstrap/libs/bootstrap-5.3.0-dist/js/bootstrap.bundle.js"></script>
+    <script src="../JS/registro.js"></script>
     <title>Registro</title> 
 </head>
 <body>
-<header class=barra>
+    <header class=barra>
         <nav class="navbar navbar-expand-lg" id="nav">
             <div class="container-fluid">
                 <img src="../../Statics/media/Escudo.png" alt="ENP6" width="30" height="24" class="d-inline-block align-text-top text-light" id="escudo">
-                <a class="navbar-brand text-light" href="#">ENP6</a><br>
+                <a class="navbar-brand text-light" href="https://www.prepa6.unam.mx/ENP6/_P6/">ENP6</a><br>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -30,16 +31,16 @@
                                 ayuda
                             </a>
                             <ul class="dropdown-menu" id="nav">
-                                <li><a class="dropdown-item text-light" href="#">Terminos y condiciones</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">Terminos y condiciones</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item text-light" href="#">Creditos</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">Creditos</a></li>
                             </ul>       
                         </li>
                         <li class="nav-item"> 
-                        <a class="nav-link active text-light" aria-current="page" href="http://localhost/Curso_Web/Proyecto_Curso_Web/General/Dynamics/PHP/inicio_sesion.php">inicia sesión</a>
+                        <a class="nav-link active text-light" aria-current="page" href="http://localhost/Curso_Web/Proyecto_Curso_Web/FINAL/Dynamics/PHP/inicio_sesion.php">inicia sesión</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link text-light" href="http://localhost/Curso_Web/Proyecto_Curso_Web/General/Dynamics/PHP/registro.php">registrate</a>
+                        <a class="nav-link text-light" href="http://localhost/Curso_Web/Proyecto_Curso_Web/FINAL/Dynamics/PHP/registro.php">registrate</a>
                         </li>
                     </ul>
                 </div>
@@ -53,7 +54,7 @@
     <form class= forms action="./registro.php" method="post" target="_self">
         <div class=datos> 
                 <label for="nombre">
-                    <input type="text" name="nombre" placeholder="Nombre" required>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" required>
                 </label>
                 <br><br>
                 <label for="numero de cuenta">
@@ -69,33 +70,31 @@
                 </label>
                 <br><br>
                 <label for="usuario">
-                    <input type="text" name="usuario" placeholder="Usuario" required>
+                    <input type="text" id="usuario" name="usuario" placeholder="Usuario" required>
                 </label>
                 <br><br>
                 <label for="contraseña">
                     <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" required>
                 </label>
                  <br><br>
-                 <center><button class=boton type="submit">Acceder</button></center>
+                 <center><button class=boton type="submit" id="entrar">Acceder</button></center>
             </div> 
         </form>
-        <form class= forms action="./registro.php" method="post" target="_blank">
+        <form class= forms action="./registro.php" method="post" target="_self">
             <div class=opcion>
 	            <h5><center>o</center></h5>
-                <a id="aRegistro" href="http://localhost/Curso_Web/Proyecto_Curso_Web/General/Dynamics/PHP/inicio_sesion.php">Inicia Sesión</a>
+                <a id="aRegistro" href="http://localhost/Curso_Web/Proyecto_Curso_Web/FINAL/Dynamics/PHP/inicio_sesion.php">Inicia Sesión</a>
             </div>
         </form>
 <?php
-    $nombre=(isset($_POST['nombre']) && $_POST["nombre"] != "")? $_POST['nombre'] : "Falta Valor";
-    $numcuen=(isset($_POST['numdecuen']) && $_POST["numdecuen"] != "")? $_POST['numdecuen'] : "Falta Valor";
-    $tel=(isset($_POST['telefono']) && $_POST["telefono"] != "")? $_POST['telefono'] : "Falta Valor";
-    $grupo=(isset($_POST['grupo']) && $_POST["grupo"] != "")? $_POST['grupo'] : "Falta Valor";
-    $usuario=(isset($_POST['usuario']) && $_POST["usuario"] != "")? $_POST['usuario'] : "Falta Valor";
-    $contra=(isset($_POST['contraseña']) && $_POST["contraseña"] != "")? $_POST['contraseña'] : "Falta Valor";
+    //comprobar que los valores existan
+    $nombre=(isset($_POST['nombre']) && $_POST["nombre"] != "")? $_POST['nombre'] : false;
+    $numcuen=(isset($_POST['numdecuen']) && $_POST["numdecuen"] != "")? $_POST['numdecuen'] : false;
+    $tel=(isset($_POST['telefono']) && $_POST["telefono"] != "")? $_POST['telefono'] : false;
+    $grupo=(isset($_POST['grupo']) && $_POST["grupo"] != "")? $_POST['grupo'] : false;
+    $usuario=(isset($_POST['usuario']) && $_POST["usuario"] != "")? $_POST['usuario'] : false;
+    $contra=(isset($_POST['contraseña']) && $_POST["contraseña"] != "")? $_POST['contraseña'] : false;
     
-    
-
-
 ?>
 </body>
 </html>
