@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../Statics/media/Escudo.png" type="image/png">
     <link rel="stylesheet" href="../../Statics/styles/registro.css">
-    <link rel="stylesheet" href="../../../../../bootstrap/libs/bootstrap-5.3.0-dist/css/bootstrap.css">
-    <script src="../../../../../bootstrap/libs/bootstrap-5.3.0-dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="../../bootstrap-5.3.0-dist/css/bootstrap.css">
+    <script src="../../bootstrap-5.3.0-dist/js/bootstrap.bundle.js"></script>
     <script src="../JS/registro.js"></script>
     <title>Registro</title> 
 </head>
@@ -37,10 +37,10 @@
                             </ul>       
                         </li>
                         <li class="nav-item"> 
-                        <a class="nav-link active text-light" aria-current="page" href="http://localhost/Curso_Web/Proyecto_Curso_Web/FINAL/Dynamics/PHP/inicio_sesion.php">inicia sesión</a>
+                        <a class="nav-link active text-light" aria-current="page" href="./inicio_sesion.php">inicia sesión</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link text-light" href="http://localhost/Curso_Web/Proyecto_Curso_Web/FINAL/Dynamics/PHP/registro.php">registrate</a>
+                        <a class="nav-link text-light" href="./registro.php">registrate</a>
                         </li>
                     </ul>
                 </div>
@@ -83,7 +83,7 @@
         <form class= forms action="./registro.php" method="post" target="_self">
             <div class=opcion>
 	            <h5><center>o</center></h5>
-                <a id="aRegistro" href="http://localhost/Curso_Web/Proyecto_Curso_Web/FINAL/Dynamics/PHP/inicio_sesion.php">Inicia Sesión</a>
+                <a id="aRegistro" href="./inicio_sesion.php">Inicia Sesión</a>
             </div>
         </form>
 <?php
